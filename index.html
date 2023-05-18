@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>survey form</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 0;
+        background-image: linear-gradient(
+            115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)
+          ),
+          url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        color: #f0f0f0;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0;
+        padding: 2rem 0;
+      }
+
+      p {
+        text-align: center;
+        margin: 0;
+        padding: 0 0 2rem 0;
+      }
+
+      form {
+        background-color: rgb(30 30 57 / 80%);
+        padding: 3rem;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea,
+      button {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+      }
+
+      /* select input type text */
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 1px solid #777;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        display: block;
+        background-color: #11f058;
+        color: #fff;
+        border: 0;
+        border-radius: 0.25rem;
+        padding: 0.75rem;
+        margin-top: 1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #11f058;
+      }
+
+      @media (min-width: 768px) {
+        form {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Free Code Camp Survey Form</h1>
+    <p>Thank you for taking the time to help us improve the platform</p>
+
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="number">Age</label>
+      <input
+        type="number"
+        id="number"
+        placeholder="Enter your age"
+        min="1"
+        max="100"
+        required
+      />
+
+      <label for="dropdown"
+        >Which option best describes your current role?</label
+      >
+      <select id="dropdown">
+        <option value="student">Student</option>
+        <option value="full-time-job">Full Time Job</option>
+        <option value="full-time-learner">Full Time Learner</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="radio-buttons"
+        >Would you recommend freeCodeCamp to a friend?</label
+      >
+      <ul id="radio-buttons">
+        <li>
+          <input
+            type="radio"
+            name="recommend"
+            value="definitely"
+            checked
+          />Definitely
+        </li>
+        <li><input type="radio" name="recommend" value="maybe" />Maybe</li>
+        <li>
+          <input type="radio" name="recommend" value="not-sure" />Not sure
+        </li>
+      </ul>
+
+      <label for="checkboxes"
+        >What is your favorite feature of freeCodeCamp?</label
+      >
+      <ul id="checkboxes">
+        <li>
+          <input
+            type="checkbox"
+            name="prefer"
+            value="challenges"
+            checked
+          />Challenges
+        </li>
+        <li>
+          <input type="checkbox" name="prefer" value="projects" />Projects
+        </li>
+        <li>
+          <input type="checkbox" name="prefer" value="community" />Community
+        </li>
+        <li>
+          <input type="checkbox" name="prefer" value="open-source" />Open Source
+        </li>
+      </ul>
+      <label id="improvement-dropboxes">
+        What would you like to see improved? (Check all that apply)
+      </label>
+      <select id="impro-dropbox">
+        <option value="front-end-projects">Front-end Projects</option>
+        <option value="back-end-projects">Back-end Projects</option>
+        <option value="data-visualization">Data Visualization</option>
+        <option value="challenges">Challenges</option>
+        <option value="open-source-community">Open Source Community</option>
+        <option value="gitter-help-rooms">Gitter help rooms</option>
+        <option value="videos">Videos</option>
+        <option value="city-meetups">City Meetups</option>
+        <option value="wiki">Wiki</option>
+        <option value="forum">Forum</option>
+        <option value="additional-courses">Additional Courses</option>
+      </select>
+
+      <label for="comments">Any Comments or Suggestions?</label>
+      <textarea
+        id="comments"
+        placeholder="Enter your comment here..."
+      ></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
